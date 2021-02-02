@@ -1,0 +1,12 @@
+$couleur_desktop: #f1cca5;
+
+$couleurs : (
+    primaire : $couleur_desktop,
+    text: pink,
+    pale: #dffad7,
+    primaire_pale : lighten($couleur_desktop, 40%)
+);
+
+@function couleur($propriete) {
+    @return map-get($couleurs, $propriete )
+}
