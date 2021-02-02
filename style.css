@@ -84,7 +84,13 @@ p {
   margin: 0 auto;
   grid-gap: 20px;
   grid-template-columns: 1fr 1fr 1fr;
-  grid-template-areas: "entete entete entete" "menu menu menu" "principal annonce1 annonce1" "pied-page pied-page pied-page";
+  grid-template-areas: "entete entete entete" "menu menu menu" "annonce1 annonce1 annonce1" "principal principal principal" "pied-page pied-page pied-page";
+}
+
+@media (min-width: 1000px) {
+  .grille {
+    grid-template-areas: "entete entete entete" "menu menu menu" "principal annonce1 annonce1" "pied-page pied-page pied-page";
+  }
 }
 
 .entete {
@@ -111,11 +117,6 @@ p {
   align-items: center;
 }
 
-/*
-.annonce2{
-    grid-area: annonce2;
-}
-*/
 .principal {
   grid-area: principal;
   display: grid;
