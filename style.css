@@ -1,12 +1,56 @@
-/* ---------------------------------------------------
+/* --------------------------------------------------
 Variables
------------------------------------------------------- */
-/* ---------------------------------------------------
-Mixins
------------------------------------------------------- */
-/* ---------------------------------------------------
-Layout
------------------------------------------------------- */
+---------------------------------------------------- */
+.animation div {
+  animation: anim-entete 1s both cubic-bezier(0.43, 1.06, 0.97, 1.1);
+}
+
+@keyframes anim-entete {
+  0% {
+    transform: translateX(500px);
+  }
+  100% {
+    transform: translateX(0);
+  }
+}
+
+/*
+.animation div:nth-of-type(1) {
+  animation-delay: .5s;
+}
+.animation div:nth-of-type(2) {
+  animation-delay: 1s;
+}
+.animation div:nth-of-type(3) {
+  animation-delay: 1.5s;
+}
+.animation div:nth-of-type(4) {
+  animation-delay: 2s;
+}
+.animation div:nth-of-type(5) {
+  animation-delay: 2.5s;
+}
+*/
+.animation div:nth-of-type(1) {
+  animation-delay: 1s;
+}
+
+.animation div:nth-of-type(2) {
+  animation-delay: 1.5s;
+}
+
+.animation div:nth-of-type(3) {
+  animation-delay: 2s;
+}
+
+.animation div:nth-of-type(4) {
+  animation-delay: 2.5s;
+}
+
+.animation div:nth-of-type(5) {
+  animation-delay: 3s;
+}
+
 * {
   margin: 0;
   padding: 0;
@@ -104,8 +148,42 @@ p {
   grid-area: menu;
 }
 
+.principal {
+  grid-area: principal;
+}
+
 .annonce1 {
   grid-area: annonce1;
+}
+
+.pied-page {
+  grid-area: pied-page;
+}
+
+.entete {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.entete section {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.entete section div {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  background-color: #87de98;
+}
+
+.annonce1 {
   background-color: #efebc5;
   color: #5e6e81;
   border-radius: 10px;
@@ -121,12 +199,7 @@ p {
 }
 
 .principal {
-  grid-area: principal;
   display: grid;
   place-items: center;
-}
-
-.pied-page {
-  grid-area: pied-page;
 }
 /*# sourceMappingURL=style.css.map */

@@ -87,8 +87,40 @@ p{
     grid-area: menu;
 }
 
-.annonce1{
+.principal{
+    grid-area: principal;
+}
+
+.annonce1 {
     grid-area: annonce1;
+}
+
+.pied-page{
+    grid-area: pied-page;
+}
+
+.entete {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    section {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+        div {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            background-color: rgb(135, 222, 152);
+        }
+    }
+}
+
+.annonce1{
     background-color: #efebc5;
     color: #5e6e81;
     border-radius: 10px;
@@ -103,12 +135,8 @@ p{
 }
 
 .principal{
-    grid-area: principal;
     display: grid;
     place-items: center;
     
 }
 
-.pied-page{
-    grid-area: pied-page;
-}
